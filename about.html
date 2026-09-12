@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عن المرجع — AI عملي</title>
+<meta name="description" content="لماذا تم إنشاء مرجع AI عملي، لمن هو موجّه، وكيف تُنظَّم معلوماته.">
+<link rel="canonical" href="https://example.com/about.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><span>AI عملي</span><span class="mark">AI</span></a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="guide.html">الدليل</a>
+      <a href="index.html#domains">الاستخدامات</a>
+      <a href="tools.html">الأدوات</a>
+      <a href="learning.html">مسارات التعلم</a>
+      <a href="prompts.html">مكتبة Prompts</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="about.html" aria-current="page">عن المرجع</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" data-open-search type="button"><span>ابحث في المرجع…</span><kbd>Ctrl K</kbd></button>
+      <button class="icon-btn" id="theme-toggle" aria-label="تبديل الوضع الداكن" type="button"></button>
+      <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="فتح القائمة" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" id="mobile-drawer-close" aria-label="إغلاق القائمة">✕</button>
+    <nav aria-label="قائمة الهاتف">
+      <a href="guide.html">الدليل</a>
+      <a href="index.html#domains">الاستخدامات</a>
+      <a href="tools.html">الأدوات</a>
+      <a href="learning.html">مسارات التعلم</a>
+      <a href="prompts.html">مكتبة Prompts</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="about.html">عن المرجع</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+  <div class="container" style="padding-top:40px; max-width:760px;">
+    <h1 class="page-title">عن AI عملي</h1>
+
+    <section style="padding-top:0;">
+      <h2>لماذا تم إنشاء هذا المرجع؟</h2>
+      <p>كثيرون يسمعون عن أدوات الذكاء الاصطناعي يوميًا، لكن المسافة بين «سمعت عن الأداة» و«أستخدمها بفعالية في عملي أو دراستي» ما زالت كبيرة. أغلب المحتوى العربي المتاح إما مقالات عامة سطحية، أو ترجمات تقنية معقدة. AI عملي محاولة لسد هذه الفجوة عبر مرجع عربي منظم، عملي، وقابل للتطبيق مباشرة.</p>
+
+      <h2>ما المشكلة التي يحلها؟</h2>
+      <p>بدل البحث المتفرق عن «كيف أستخدم الذكاء الاصطناعي في كذا»، يقدّم هذا المرجع مسارًا واضحًا: من تحديد المهمة، إلى اختيار الأداة، إلى صياغة الأمر المناسب، إلى تنفيذه، إلى التحقق من نتيجته. كل ذلك في مكان واحد ومنظم حسب المجال والمستوى.</p>
+
+      <h2>لمن هو هذا المرجع؟</h2>
+      <p>لأي شخص يتعامل مع الذكاء الاصطناعي بغض النظر عن خلفيته: طالب، موظف، مبرمج، مصمم، باحث، صانع محتوى، أو صاحب مشروع. يمكن اختيار مستوى الشرح (مبتدئ، متوسط، متقدم) حسب خلفية كل شخص.</p>
+
+      <h2>كيف يتم تنظيم المعلومات؟</h2>
+      <p>يعتمد المرجع مبدأ الكشف التدريجي (Progressive Disclosure): تظهر المعلومة الأساسية أولًا، ثم يمكن للمستخدم اختيار التعمق أكثر عبر أزرار واضحة (شرح، تفاصيل، مثال، متقدم) بدل عرض نص طويل دفعة واحدة. المحتوى نفسه مفصول تقنيًا عن التصميم (في ملف بيانات مستقل)، مما يسمح بتوسيعه وتحديثه باستمرار.</p>
+
+      <h2>مبادئ المشروع</h2>
+      <ul>
+        <li>لا معلومات مُختلَقة: إذا لم تتوفر بيانات موثوقة عن أداة أو حقيقة تقنية، تُترك المساحة فارغة بوضوح بدل تعبئتها بتخمين.</li>
+        <li>لا مبالغة تسويقية: المحتوى يُكتب بأسلوب توثيقي مباشر، لا بلغة إعلانية.</li>
+        <li>التفاعل له وظيفة دائمًا: كل زر أو تبويب يخدم الفهم أو الوصول أو التطبيق، وليس الزخرفة.</li>
+        <li>الخصوصية أولًا: لا يوجد خادم خلفي يجمع بيانات المستخدم؛ أي حفظ (كالوضع الداكن أو تقدم التعلم) يتم محليًا على متصفح المستخدم فقط.</li>
+      </ul>
+
+      <h2>إعداد وتصميم</h2>
+      <p>عمار محمد<br>Ammar Mohammad</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>AI عملي</span></div>
+        <p>المرجع التفاعلي الشامل لاستخدام الذكاء الاصطناعي.</p>
+      </div>
+      <div class="footer-links">
+        <div><a href="guide.html">الدليل</a><a href="tools.html">الأدوات</a><a href="index.html#domains">الاستخدامات</a></div>
+        <div><a href="prompts.html">مكتبة Prompts</a><a href="learning.html">مسارات التعلم</a><a href="tests.html">الاختبارات</a></div>
+        <div><a href="about.html">عن المرجع</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>إعداد وتصميم: عمار محمد — Ammar Mohammad</span>
+      <span id="footer-year"></span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="search-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="بحث">
+    <input type="text" id="search-input" class="modal-search-input" placeholder="ابحث عن مفهوم، أداة، Prompt، أو استخدام…" autocomplete="off">
+    <div class="modal-results" id="search-results"></div>
+    <div class="modal-footer-hint"><span>↑↓ للتنقل</span><span>Enter للفتح</span><span>Esc للإغلاق</span></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>document.getElementById("footer-year").textContent = "© " + new Date().getFullYear();</script>
+</body>
+</html>

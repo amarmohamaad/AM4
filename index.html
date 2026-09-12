@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI عملي — المرجع التفاعلي الشامل لاستخدام الذكاء الاصطناعي</title>
+<meta name="description" content="مرجع عربي تفاعلي يساعدك على فهم أدوات الذكاء الاصطناعي واستخدامها في الدراسة والعمل والبرمجة والتصميم، من أول خطوة حتى بناء Workflows متقدمة.">
+<link rel="canonical" href="https://example.com/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI عملي — المرجع التفاعلي الشامل لاستخدام الذكاء الاصطناعي">
+<meta property="og:description" content="مرجع عربي تفاعلي لفهم واستخدام الذكاء الاصطناعي في الحياة والدراسة والعمل.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI عملي",
+  "alternateName": "AI Amali",
+  "description": "المرجع التفاعلي الشامل لاستخدام الذكاء الاصطناعي",
+  "author": { "@type": "Person", "name": "Ammar Mohammad" }
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><span>AI عملي</span><span class="mark">AI</span></a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="guide.html">الدليل</a>
+      <a href="index.html#domains">الاستخدامات</a>
+      <a href="tools.html">الأدوات</a>
+      <a href="learning.html">مسارات التعلم</a>
+      <a href="prompts.html">مكتبة Prompts</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="about.html">عن المرجع</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" data-open-search type="button">
+        <span>ابحث في المرجع…</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" data-open-search aria-label="بحث" type="button" style="display:none;" id="mobile-search-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" id="theme-toggle" aria-label="تبديل الوضع الداكن" type="button"></button>
+      <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="فتح القائمة" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" id="mobile-drawer-close" aria-label="إغلاق القائمة">✕</button>
+    <nav aria-label="قائمة الهاتف">
+      <a href="guide.html">الدليل</a>
+      <a href="index.html#domains">الاستخدامات</a>
+      <a href="tools.html">الأدوات</a>
+      <a href="learning.html">مسارات التعلم</a>
+      <a href="prompts.html">مكتبة Prompts</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="about.html">عن المرجع</a>
+      <a href="#" data-open-search>بحث</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero" style="border-bottom:1px solid var(--border); padding-bottom:0;">
+    <div class="container">
+      <p class="hero-eyebrow">مرجع عربي تفاعلي — إعداد وتصميم عمار محمد</p>
+      <h1>تعلّم كيف تستخدم الذكاء الاصطناعي لحل المشكلات الحقيقية</h1>
+      <p class="lede">مرجع عربي تفاعلي يساعدك على فهم أدوات الذكاء الاصطناعي واستخدامها بوضوح، من أول خطوة حتى بناء Workflows متقدمة، في الدراسة والعمل والبرمجة والتصميم والبحث.</p>
+      <div class="hero-actions">
+        <a href="guide.html" class="btn btn-primary">ابدأ من الصفر</a>
+        <a href="#domains" class="btn btn-secondary">استكشف المرجع</a>
+      </div>
+
+      <div class="task-finder" style="margin-bottom:-1px;">
+        <label for="hero-task-input">ماذا تريد أن تنجز باستخدام الذكاء الاصطناعي؟</label>
+        <input type="text" id="hero-task-input" placeholder="مثال: تلخيص ملف PDF، شرح درس، كتابة كود…" readonly>
+        <div class="task-finder-examples">
+          <button class="chip" type="button" data-open-search>تلخيص ملف</button>
+          <button class="chip" type="button" data-open-search>شرح درس</button>
+          <button class="chip" type="button" data-open-search>إنشاء صورة</button>
+          <button class="chip" type="button" data-open-search>تحليل بيانات</button>
+          <button class="chip" type="button" data-open-search>كتابة كود</button>
+          <button class="chip" type="button" data-open-search>البحث عن معلومات</button>
+          <button class="chip" type="button" data-open-search>إنشاء محتوى</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="domains">
+    <div class="container">
+      <div class="section-head">
+        <h2>ماذا تريد أن تنجز؟</h2>
+        <p>اختر المجال الأقرب لما تعمل عليه، وسنقودك إلى الأداة المناسبة والطريقة والـ Prompt الجاهز.</p>
+      </div>
+      <div class="domain-grid" id="domain-grid"></div>
+      <div id="domain-detail" style="margin-top:32px;"></div>
+    </div>
+  </section>
+
+  <section id="verify-teaser">
+    <div class="container">
+      <div class="section-head">
+        <h2>لا تصدّق كل نتيجة تلقائيًا</h2>
+        <p>الذكاء الاصطناعي قد يخطئ بثقة تامة. قبل استخدام أي نتيجة حساسة، راجع دليل التحقق من النتائج.</p>
+      </div>
+      <a href="guide.html#verify" class="btn btn-secondary">اذهب إلى دليل التحقق</a>
+    </div>
+  </section>
+
+  <section id="paths-teaser">
+    <div class="container">
+      <div class="section-head">
+        <h2>مسارات تعلم منظمة</h2>
+        <p>إذا كنت تفضّل التعلم خطوة بخطوة بدل التصفح الحر، ابدأ بأحد مسارات التعلم المرتبة حسب المستوى والمدة.</p>
+      </div>
+      <a href="learning.html" class="btn btn-primary">تصفّح مسارات التعلم</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>AI عملي</span></div>
+        <p>المرجع التفاعلي الشامل لاستخدام الذكاء الاصطناعي.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="guide.html">الدليل</a>
+          <a href="tools.html">الأدوات</a>
+          <a href="index.html#domains">الاستخدامات</a>
+        </div>
+        <div>
+          <a href="prompts.html">مكتبة Prompts</a>
+          <a href="learning.html">مسارات التعلم</a>
+          <a href="tests.html">الاختبارات</a>
+        </div>
+        <div>
+          <a href="about.html">عن المرجع</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>إعداد وتصميم: عمار محمد — Ammar Mohammad</span>
+      <span id="footer-year"></span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="search-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="بحث">
+    <input type="text" id="search-input" class="modal-search-input" placeholder="ابحث عن مفهوم، أداة، Prompt، أو استخدام…" autocomplete="off">
+    <div class="modal-results" id="search-results"></div>
+    <div class="modal-footer-hint"><span>↑↓ للتنقل</span><span>Enter للفتح</span><span>Esc للإغلاق</span></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>document.getElementById("footer-year").textContent = "© " + new Date().getFullYear();</script>
+</body>
+</html>

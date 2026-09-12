@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدليل — AI عملي</title>
+<meta name="description" content="دليل شامل لأساسيات الذكاء الاصطناعي، هندسة الأوامر (Prompt Engineering)، التحقق من النتائج، والأمان والخصوصية.">
+<link rel="canonical" href="https://example.com/guide.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo"><span>AI عملي</span><span class="mark">AI</span></a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="guide.html" aria-current="page">الدليل</a>
+      <a href="index.html#domains">الاستخدامات</a>
+      <a href="tools.html">الأدوات</a>
+      <a href="learning.html">مسارات التعلم</a>
+      <a href="prompts.html">مكتبة Prompts</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="about.html">عن المرجع</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" data-open-search type="button"><span>ابحث في المرجع…</span><kbd>Ctrl K</kbd></button>
+      <button class="icon-btn" id="theme-toggle" aria-label="تبديل الوضع الداكن" type="button"></button>
+      <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="فتح القائمة" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" id="mobile-drawer-close" aria-label="إغلاق القائمة">✕</button>
+    <nav aria-label="قائمة الهاتف">
+      <a href="guide.html">الدليل</a>
+      <a href="index.html#domains">الاستخدامات</a>
+      <a href="tools.html">الأدوات</a>
+      <a href="learning.html">مسارات التعلم</a>
+      <a href="prompts.html">مكتبة Prompts</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="about.html">عن المرجع</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+  <div class="container page-layout">
+    <aside class="page-sidebar">
+      <nav aria-label="أقسام الدليل">
+        <a href="#basics">أساسيات الذكاء الاصطناعي</a>
+        <a href="#prompting">هندسة الأوامر</a>
+        <a href="#verify">التحقق من النتائج</a>
+        <a href="#safety">الأمان والخصوصية</a>
+      </nav>
+    </aside>
+
+    <div>
+      <h1 class="page-title">الدليل</h1>
+      <p class="page-lede">مرجع مبني على مبدأ الكشف التدريجي: المعلومة الأساسية أولًا، ثم التفاصيل، ثم المستوى المتقدم عند الحاجة فقط.</p>
+
+      <section id="basics" style="padding-top:0;">
+        <div class="section-head">
+          <h2>أساسيات الذكاء الاصطناعي</h2>
+          <p>افتح أي عنصر لعرض تعريفه، ثم استخدم الأزرار الفرعية للتفاصيل أو المثال أو الأسئلة الشائعة.</p>
+        </div>
+        <div id="guide-topics"></div>
+      </section>
+
+      <section id="prompting">
+        <div class="section-head">
+          <h2>هندسة الأوامر (Prompt Engineering)</h2>
+          <p>المفاهيم الأساسية لكتابة أوامر فعّالة، مع بنّاء أوامر تفاعلي يبني لك Prompt جاهزًا.</p>
+        </div>
+
+        <div class="card" style="margin-bottom:24px;">
+          <h3>بنّاء الأوامر (Prompt Builder)</h3>
+          <p class="meta">اختر العناصر التالية وسيُبنى لك Prompt منظم تلقائيًا.</p>
+          <form id="prompt-builder-form" class="builder-grid">
+            <div>
+              <div class="builder-field"><label for="pb-goal">الهدف</label><select name="goal" id="pb-goal"></select></div>
+              <div class="builder-field"><label for="pb-role">الدور</label><select name="role" id="pb-role"></select></div>
+              <div class="builder-field"><label for="pb-audience">الجمهور</label><select name="audience" id="pb-audience"></select></div>
+              <div class="builder-field"><label for="pb-language">اللغة</label><select name="language" id="pb-language"></select></div>
+              <div class="builder-field"><label for="pb-tone">أسلوب الإجابة</label><select name="tone" id="pb-tone"></select></div>
+              <div class="builder-field"><label for="pb-format">شكل النتيجة</label><select name="format" id="pb-format"></select></div>
+              <div class="builder-field"><label for="pb-constraints">القيود</label><select name="constraints" id="pb-constraints"></select></div>
+            </div>
+            <div class="builder-output">
+              <label style="font-weight:600; display:block; margin-bottom:6px;">الأمر الناتج</label>
+              <div class="prompt-box" id="prompt-builder-output"></div>
+              <button type="button" class="copy-btn" data-copy-target="prompt-builder-output">نسخ الأمر</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="prompt-concepts"></div>
+      </section>
+
+      <section id="verify">
+        <div class="section-head">
+          <h2>التحقق من نتائج الذكاء الاصطناعي</h2>
+          <p>الوثوق الأعمى بأي نتيجة هو أكثر خطأ شائع. هذه المفاهيم تساعدك على قراءة النتائج بحذر مناسب.</p>
+        </div>
+        <div id="verify-topics"></div>
+        <div class="card" style="margin-top:20px;">
+          <h3>قائمة تحقق سريعة قبل استخدام أي نتيجة حساسة</h3>
+          <div id="verification-checklist"></div>
+        </div>
+      </section>
+
+      <section id="safety" style="border-bottom:none;">
+        <div class="section-head">
+          <h2>الأمان والخصوصية</h2>
+          <p>قواعد بسيطة تحميك أثناء استخدام أدوات الذكاء الاصطناعي يوميًا.</p>
+        </div>
+        <div id="safety-topics"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>AI عملي</span></div>
+        <p>المرجع التفاعلي الشامل لاستخدام الذكاء الاصطناعي.</p>
+      </div>
+      <div class="footer-links">
+        <div><a href="guide.html">الدليل</a><a href="tools.html">الأدوات</a><a href="index.html#domains">الاستخدامات</a></div>
+        <div><a href="prompts.html">مكتبة Prompts</a><a href="learning.html">مسارات التعلم</a><a href="tests.html">الاختبارات</a></div>
+        <div><a href="about.html">عن المرجع</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>إعداد وتصميم: عمار محمد — Ammar Mohammad</span>
+      <span id="footer-year"></span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="search-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="بحث">
+    <input type="text" id="search-input" class="modal-search-input" placeholder="ابحث عن مفهوم، أداة، Prompt، أو استخدام…" autocomplete="off">
+    <div class="modal-results" id="search-results"></div>
+    <div class="modal-footer-hint"><span>↑↓ للتنقل</span><span>Enter للفتح</span><span>Esc للإغلاق</span></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+document.getElementById("footer-year").textContent = "© " + new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  const verifyEl = document.getElementById("verify-topics");
+  if (verifyEl && typeof VERIFICATION_TOPICS !== "undefined"){
+    verifyEl.innerHTML = VERIFICATION_TOPICS.map(t => `<div class="card"><h3>${t.title}</h3><p>${t.text}</p></div>`).join("");
+  }
+  const safetyEl = document.getElementById("safety-topics");
+  if (safetyEl && typeof SAFETY_TOPICS !== "undefined"){
+    safetyEl.innerHTML = SAFETY_TOPICS.map(t => `<div class="card"><h3>${t.title}</h3><p>${t.text}</p></div>`).join("");
+  }
+});
+</script>
+</body>
+</html>
